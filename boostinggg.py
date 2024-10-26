@@ -54,7 +54,7 @@ def clone_and_run(repo_url, script_name):
 def generate_random_key():
     number1 = random.randint(1000, 9999)  # First random number
     number2 = random.randint(1000, 9999)  # Second random number
-    return f"{number1}-BOOSTING-TOOL-{number2}"
+    return f"{number1}-HANDLE-TOOL-KYZIN-{number2}"
 
 def get_stored_key():
     if os.path.exists(KEY_FILE):
@@ -256,3 +256,4 @@ def reset():
 
 if __name__ == "__main__":
     main_menu()
+    
