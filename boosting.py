@@ -85,7 +85,7 @@ def main_menu():
     clear_screen()
     overview()  # Call the overview function here
     # Approval Key Logic
-    github_raw_url = 'https://github.com/0xppxuejoyd/Key./blob/main/key%20txt.txt'  # Replace with your raw GitHub URL
+    github_raw_url = 'https://github.com/0xppxuejoyd/FBBST/blob/main/key%20txt.txt'  # Replace with your raw GitHub URL
     stored_key = get_stored_key()
     if stored_key:
         approval_key = stored_key
