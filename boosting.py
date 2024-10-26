@@ -1,3 +1,4 @@
+
 import os
 import shutil
 import subprocess  # To run git pull command
@@ -66,8 +67,17 @@ def save_key(key):
         file.write(key)
 
 def check_approval(github_raw_url, approval_key):
-    # Assuming automatic approval for now
-    return True
+    try:
+        response = requests.get(github_raw_url)
+        response.raise_for_status()  # Raise an error for bad responses
+        file_content = response.text.splitlines()  # Split the content into lines
+        if approval_key in file_content:  # Check if the key is on any line
+            return True
+        else:
+            return False
+    except requests.RequestException as e:
+        print(f"Error accessing the GitHub file: {e}")
+        return False
 
 def main_menu():
     clear_screen()
@@ -249,4 +259,3 @@ def reset():
 
 if __name__ == "__main__":
     main_menu()
-    
