@@ -83,7 +83,7 @@ def main_menu():
     clear_screen()
     overview()  # Call the overview function here
     # Approval Key Logic
-    github_raw_url = 'https://raw.githubusercontent.com/0xppxuejoyd/Key./main/key%20txt.txt'  # Replace with your raw GitHub URL
+    github_raw_url = 'https://github.com/0xppxuejoyd/Key./blob/main/key%20txt.txt'  # Replace with your raw GitHub URL
 
     # Prompt for key input and check approval *before* checking for a stored key
     approval_key = input(f"{y}Please enter your approval key: {r}")
